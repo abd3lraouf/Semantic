@@ -1,6 +1,7 @@
 |Banner|
 
 |CI Scanner| |CI Build| |Maintainability| |Packages|
+
 |DOI|
 
 |
@@ -47,8 +48,8 @@ Thanks to all our contributors! I'm very grateful for all the work you've done t
 Citation
 ========
 
-*Semantic* versioning for android `DOI:10.5281/zenodo.514068945 <https://zenodo.org/badge/latestdoi/514068945>`_.
-
+*Semantic* versioning project for android `DOI:10.5281/zenodo.514068945 <https://zenodo.org/badge/latestdoi/514068945>`_.
+AbdElraouf Sabri, A. Senior Android Developer
 
 Copyright
 =========
