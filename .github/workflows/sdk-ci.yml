@@ -4,9 +4,17 @@ on:
   push:
     branches:
       - master
+      - next
+      - next-major
+      - beta
+      - alpha
   pull_request:
     branches:
       - master
+      - next
+      - next-major
+      - beta
+      - alpha
 
 env:
   GRADLE: '7.4.2'
