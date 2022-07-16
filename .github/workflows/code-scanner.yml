@@ -11,6 +11,9 @@ on:
 jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
 
     steps:
       - name: Checkout repository
@@ -33,11 +36,18 @@ jobs:
       - name: Gradle Wrapper Validation
         uses: gradle/wrapper-validation-action@v1
 
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+
       - name: Build
         run: |
           ./gradlew spotbugsDebug spotbugsRelease
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif@v2
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: sdk/build/reports/spotbugs/
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
