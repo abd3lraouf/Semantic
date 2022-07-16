@@ -1,6 +1,7 @@
 |Banner|
 
 |CI Scanner| |CI Build| |Maintainability| |Packages|
+|DOI|
 
 |
 
@@ -15,8 +16,8 @@ Package
 
 The latest version of the packages can be found on the GitHub `releases page <https://github.com/abd3lraouf/Semantic/releases>`_.
 
-Root project `build.gradle`
-^^^^^^^^^^^^^^^^^^^^^
+Root project build.gradle
+^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: groovy
 
    repositories {
@@ -25,8 +26,8 @@ Root project `build.gradle`
        }
    }
 
-App project `build.gradle`
-^^^^^^^^^^^^^^^^^^^^^
+App project build.gradle
+^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: groovy
 
    dependencies {
@@ -43,6 +44,12 @@ Thanks to all our contributors! I'm very grateful for all the work you've done t
 
 |Contribs|
 
+Citation
+========
+
+*Semantic* versioning for android `DOI:10.5281/zenodo.514068945 <https://zenodo.org/badge/latestdoi/514068945>`_.
+
+
 Copyright
 =========
 
@@ -52,7 +59,7 @@ By submitting a pull request to this project, you agree to license your contribu
 2.0 to this project.
 
 
-.. |Banner| image:: https://github.com/abd3lraouf/Semantic/blob/master/art/automated-semantic-versioning.png
+.. |Banner| image:: https://raw.githubusercontent.com/abd3lraouf/Semantic/master/art/automated-semantic-versioning.png
    :target: https://github.com/abd3lraouf/Semantic
    :alt: Semantic logo
 
@@ -75,3 +82,7 @@ By submitting a pull request to this project, you agree to license your contribu
 .. |Contribs| image:: https://contrib.rocks/image?repo=abd3lraouf/Semantic
    :target: https://github.com/abd3lraouf/Semantic/graphs/contributors
    :alt: Contributors
+
+.. |DOI| image:: https://zenodo.org/badge/514068945.svg
+   :target: https://zenodo.org/badge/latestdoi/514068945
+   :alt: DOI

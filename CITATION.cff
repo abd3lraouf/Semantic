@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: Senior Android Developer
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: AbdElraouf
+    name-particle: Sabri
+    family-names: AbdElraouf
+    email: abdelraoufsabri@gmail.com
+identifiers:
+  - type: url
+    value: 'https://abd3lraouf.dev'
+    description: My Website
+license: Apache-2.0
