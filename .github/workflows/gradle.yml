@@ -55,4 +55,4 @@ jobs:
       if: always()
       with:
         name: reports (Gradle ${{ env.GRADLE }})
-        path: build/reports
+        path: sdk/build/reports
