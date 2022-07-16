@@ -8,6 +8,7 @@ plugins {
     id 'org.sonarqube' version '3.4.0.2513'
     id 'com.dicedmelon.gradle.jacoco-android'
     id 'com.github.spotbugs'
+    id 'maven-publish'
 }
 
 android {
@@ -70,6 +71,32 @@ tasks.withType(SpotBugsTask) {
 
 static String slashSeparated(String s) {
     return s.replaceAll(/\B[A-Z]/) { '/' + it }.toLowerCase()
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/abd3lraouf/Semantic")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            groupId = 'dev.abd3lraouf.learn.Semantic'
+            artifactId "$project.name"
+            from components.findByName("all")
+        }
+    }
+}
+
+task comps {
+    afterEvaluate {
+        println("Components: " + components*.name)
+    }
 }
 
 dependencies {

@@ -35,6 +35,9 @@ jobs:
       uses: gradle/wrapper-validation-action@v1
     - name: Run Semantic Release
       run: |
+        mkdir ~/.gradle
+        echo "gpr.user=abd3lraouf" >> ~/.gradle/gradle.properties
+        echo "gpr.key=${{ secrets.GITHUB_TOKEN }}" >> ~/.gradle/gradle.properties
         rm -rf build/libs/*.jar
         npm ci
         npx semantic-release
