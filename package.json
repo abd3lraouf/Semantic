@@ -1,0 +1,46 @@
+{
+  "name": "sdk",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.3",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "gradle-semantic-release-plugin": "1.7.3",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "pinst": "^3.0.0",
+    "prettier": "^2.7.1",
+    "semantic-release": "19.0.3"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.md,package.json": [
+      "prettier --write"
+    ]
+  },
+  "release": {
+    "tagFormat": "${version}",
+    "branches": [
+      {
+        "name": "master"
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "gradle-semantic-release-plugin",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "build/libs/*.jar"
+          ]
+        }
+      ]
+    ]
+  },
+  "engines": {
+    "node": "^16.13.0"
+  }
+}
