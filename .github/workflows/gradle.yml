@@ -33,15 +33,6 @@ jobs:
         cache: npm
     - name: Gradle Wrapper Validation
       uses: gradle/wrapper-validation-action@v1
-    - name: Build with Gradle
-      env:
-        SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-        SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
-      run: |
-        ./gradlew build --no-daemon -Dsnom.test.functional.gradle=${{ env.GRADLE }}
-        echo Verifying the java version used in class files...
-        cd build/classes/groovy/main
-        javap -v com.github.spotbugs.snom.SpotBugsPlugin | grep -q 'major version: 52'
     - name: Run Semantic Release
       run: |
         echo "gradle.publish.key=${{ secrets.GRADLE_PUBLISH_KEY }}" > ~/.gradle/gradle.properties
