@@ -14,4 +14,14 @@
 package dev.abd3lraouf.learn.sdk
 
 @Suppress("unused")
-class Sdk
+class Sdk {
+    companion object {
+        fun init() {
+            println("sdk init")
+        }
+
+        fun destroy() {
+            println("sdk destroy")
+        }
+    }
+}
