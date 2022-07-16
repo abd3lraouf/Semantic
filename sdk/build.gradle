@@ -63,7 +63,7 @@ tasks.withType(SpotBugsTask) {
     reports {
         html {
             required = true
-            outputLocation = file("$buildDir/reports/${slashSeparated(taskName)}.html")
+            outputLocation = file("$buildDir/reports/${slashSeparated(taskName)}.sarif")
             stylesheet = 'fancy-hist.xsl'
         }
     }
