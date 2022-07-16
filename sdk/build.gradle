@@ -61,10 +61,9 @@ spotbugs {
 tasks.withType(SpotBugsTask) {
     def taskName = name
     reports {
-        html {
+        sarif {
             required = true
             outputLocation = file("$buildDir/reports/${slashSeparated(taskName)}.sarif")
-            stylesheet = 'fancy-hist.xsl'
         }
     }
 }
