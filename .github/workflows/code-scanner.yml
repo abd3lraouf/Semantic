@@ -1,5 +1,4 @@
-# refs https://github.com/github/codeql-action
-name: "Code Scanning - Action"
+name: "Code Scanner"
 
 on:
   push:

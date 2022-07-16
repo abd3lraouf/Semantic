@@ -1,4 +1,4 @@
-name: Java CI
+name: "SDK CI"
 
 on:
   push:
@@ -33,6 +33,10 @@ jobs:
         cache: npm
     - name: Gradle Wrapper Validation
       uses: gradle/wrapper-validation-action@v1
+    - name: Build with Gradle
+      run: |
+        ./gradlew build --no-daemon
+
     - name: Run Semantic Release
       run: |
         mkdir ~/.gradle
@@ -56,3 +60,4 @@ jobs:
       with:
         name: reports (Gradle ${{ env.GRADLE }})
         path: sdk/build/reports
+        if-no-files-found: ignore
