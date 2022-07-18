@@ -14,14 +14,14 @@
 package dev.abd3lraouf.learn.sdk
 
 @Suppress("unused")
-class Sdk {
-    companion object {
-        fun init() {
-            println("sdk init")
-        }
+object Sdk {
+    fun init() {
+        println("sdk init")
+    }
 
-        fun destroy() {
-            println("sdk destroy")
-        }
+    fun format(str: String) = str.replace(" ", "_")
+
+    fun destroy() {
+        println("sdk destroy")
     }
 }
