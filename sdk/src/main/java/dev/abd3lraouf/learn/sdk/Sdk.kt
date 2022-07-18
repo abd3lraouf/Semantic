@@ -19,6 +19,8 @@ object Sdk {
         println("sdk init")
     }
 
+    fun format(str: String) = str.replace(" ", "_")
+
     fun destroy() {
         println("sdk destroy")
     }
