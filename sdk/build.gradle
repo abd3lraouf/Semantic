@@ -5,7 +5,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'signing'
     id 'spotless.gradle-plugin'
-    id 'org.sonarqube' version '3.4.0.2513'
+    id 'org.sonarqube' version '4.0.0.2929'
     id 'com.dicedmelon.gradle.jacoco-android'
     id 'com.github.spotbugs'
     id 'maven-publish'
